@@ -1,0 +1,33 @@
+import React,{usestate} from'react';
+import{Text,View, Button,TextInput}from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator, createTabBottomTabNavigator } from '@react-navigation/bottom-tabs';
+const Tab= createBottomTabNavigator();
+export  default function App (){
+return(
+  <NavigationContainer>
+       <Tab.Navigator>
+           <Tab.Screen name='Login'component={Login}/>
+
+           <Tab.Screen name='Signup'component={Signup}/>
+
+       
+      </Tab.Navigator>
+  </NavigationContainer>
+)
+}
+ const Login=()=>{
+  return(
+    <View style={{flex:1,alignItem:'center',justifycontent:'center'}}>
+
+<Text Style={{fontsize:300,marginTop:300,marginLeft:250}}>login</Text>
+
+    </View>)
+ }
+  const Signup=()=>{
+    
+    return(
+    <View>
+      <Text Style={{fontsize:100}}>signup</Text>
+    </View>)
+  }
